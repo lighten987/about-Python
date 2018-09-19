@@ -37,3 +37,12 @@ import导入整个模块 from  import导入模块中的某些函数甚至所有�
 从某个模块中导入多个函数,格式为： from somemodule import firstfunc, secondfunc, thirdfunc  
 将某个模块中的全部函数导入，格式为： from somemodule import *  
 
+py中的变量不需要申明，变量赋值后使用就行  c = 11 # 整型变量   d = 1.2 # 浮点型变量 e = "abc" # 字符串  
+**骚操作**  a,b,c = 1,2.5,"abc"  
+
+**标准数据类型**  对于数据 用type(x)可查看数据类型  
+不可变数据（3个）：number（数字） string(字符串) tuple(元组)  数字类型在2中有long 3中只有int   
+可变数据（3个）：list(列表) dictionary（字典） set（集合）  
+
+**数值运算**  只说特殊的  
+
