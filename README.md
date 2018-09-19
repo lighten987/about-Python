@@ -25,3 +25,15 @@ print(str * 2)             # 输出字符串两次
 print(str + '你好')        # 连接字符串  
 
 函数之间或类的方法之间用空行分隔，表示一段新的代码的开始。类和函数入口之间也用一行空行分隔，以突出函数入口的开始。  
+
+缩进相同的一组语句构成一个代码块，称为代码组  if,while,def,class这种复合语句关键词后用冒号：表示首行结束，之后的就是一个代码块  
+  
+print输出默认换行，如果不想换行，在变量末尾加**，end=""**  
+  
+**py的导入**  
+import导入整个模块 from  import导入模块中的某些函数甚至所有函数  
+将整个模块(somemodule)导入，格式为： import somemodule  
+从某个模块中导入某个函数,格式为： from somemodule import somefunction  
+从某个模块中导入多个函数,格式为： from somemodule import firstfunc, secondfunc, thirdfunc  
+将某个模块中的全部函数导入，格式为： from somemodule import *  
+
