@@ -66,4 +66,8 @@ divmod(x,y) #商余 divmod(10,3) 结果为(10,3)
   
 输出语句中多用"槽"来进行占位，然后format()依次填充，当然槽里可标记非顺序使得内容有跳跃  
 print("nicai{}le".format("对" if true else "错")) **输出是一个点.format**    
-
+  
+python的class中的object是指这个类继承的最顶级的对象。python3.x 中已经可以省略object，可直接  
+>class Sample():  
+    pass  
+    
