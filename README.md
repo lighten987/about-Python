@@ -69,5 +69,5 @@ print("nicai{}le".format("对" if true else "错")) **输出是一个点.format*
   
 python的class中的object是指这个类继承的最顶级的对象。python3.x 中已经可以省略object，可直接  
 >class Sample():  
-    pass  
+     pass  
     
