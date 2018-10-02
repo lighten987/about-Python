@@ -77,7 +77,6 @@ python的class中的object是指这个类继承的最顶级的对象。python3.x
 >class Parent:  
     def pprt(self):  
         print(self)  
-  
 class Child(Parent):  
     def cprt(self):  
         print(self)  
