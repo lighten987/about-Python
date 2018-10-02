@@ -71,3 +71,54 @@ python的class中的object是指这个类继承的最顶级的对象。python3.x
 >class Sample():  
         pass  
     
+**def里面的self代表的是类的实例。而self.class则指向类**  
+**self在定义时不可以省略**  
+**在继承时，传入的是哪个实例，就是那个传入的实例，而不是指定义了self的类的实例。**  
+>class Parent:  
+    def pprt(self):  
+        print(self)  
+  
+class Child(Parent):  
+    def cprt(self):  
+        print(self)  
+c = Child()  
+c.cprt()  
+c.pprt()  
+p = Parent()  
+p.pprt()  
+  
+执行结果：  
+  
+><__main__.Child object at 0x0057C3F0>  
+<__main__.Child object at 0x0057C3F0>  
+<__main__.Parent object at 0x0057CBD0>    
+运行c.cprt()时应该没有理解问题，指的是Child类的实例。  
+但是在运行c.pprt()时，等同于Child.pprt(c)，所以self指的依然是Child类的实例，由于self中没有定义pprt()方法，所以沿着继承树往上找，发现在父类Parent中定义了pprt()方法，所以就会成功调用。  
+**在描述符类中，self指的是描述符类的实例**  
+>class Desc:  
+    def __get__(self, ins, cls):  
+        print('self in Desc: %s ' % self )  
+        print(self, ins, cls)  
+class Test:  
+    x = Desc()  
+    def prt(self):  
+        print('self in Test: %s' % self)  
+t = Test()  
+t.prt()  
+t.x  
+  
+执行结果：  
+>self in Test: <__main__.Test object at 0x0045C3B0>  
+self in Desc: <__main__.Desc object at 0x0045C310>   
+<__main__.Desc object at 0x0045C310> <__main__.Test object at 0x0045C3B0> <class '__main__.Test'>  
+最后一句t.x，也就是Test类的实例t的属性x，由于实例t中并没有定义属性x，所以找到了类属性x，而该属性是描述符属性，为Desc类的实例而已，所以此处并没有顶用Test的任何方法。
+
+而如果把t.x改为Test.x  
+
+执行结果：  
+>self in Test: <__main__.Test object at 0x0044C3B0>  
+self in Desc: <__main__.Desc object at 0x0044C310>   
+<__main__.Desc object at 0x0044C310> None <class '__main__.Test'>123  
+由于在很多时候描述符类中仍然需要知道调用该描述符的实例是谁，所以在描述符类中存在第二个参数ins，用来表示调用它的类实例，所以t.x时可以看到第三行中的运行结果中第二项为  
+<<main.Test object at 0x0000000002A570B8>  
+而采用Test.x进行调用时，由于没有实例，所以返回None。  
