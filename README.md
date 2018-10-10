@@ -132,7 +132,8 @@ self in Desc: <__main__.Desc object at 0x0044C310>
 注意True,False,首字母大写,true不是关键字  
 关键字None用来占位，不属于任何类型，变量解除绑定  
 a//b地板除，结果向下取整（永远舍尾），a**b 幂运算  
-
+  
+与或非的表示 and,or,not  a and b 返回b  
 
 
 
