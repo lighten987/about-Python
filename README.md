@@ -134,6 +134,8 @@ self in Desc: <__main__.Desc object at 0x0044C310>
 a//b地板除，结果向下取整（永远舍尾），a**b 幂运算  
   
 与或非的表示 and,or,not  a and b 返回b  
+  
+类似于c中的三目运算符 ？ ： py中语法格式为：表达式1 if 真值表达式 表达式2  “优”  if score>90  "差"  
 
 
 
