@@ -143,3 +143,4 @@ l.copy()浅拷贝， 共享地址，一改全改，保证只读时用浅拷贝�
 深拷贝要import copy 再调用函数copy.deepcopy()  
 
 
+
