@@ -162,6 +162,11 @@ def func(a,*argc,b,c):
 双星号字典形参：语法格式为：  
 def 函数名(**元组形参名)：  
     语句块   
-
+  
+变量跳出作用域，使用global关键字  
    
+函数可以当成变量直接赋值，f1 = f2  
+map,reduce,filter,sorted函数  
+
+lambda表达式(匿名函数)  
 
