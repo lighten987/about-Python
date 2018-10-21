@@ -170,3 +170,5 @@ map,reduce,filter,sorted函数
 
 lambda表达式(匿名函数)  
 
+
+**牢记py3的print要加括号()**  
