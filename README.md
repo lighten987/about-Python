@@ -169,7 +169,7 @@ def 函数名(**元组形参名)：
 map,reduce,filter,sorted函数  
 
 lambda表达式(匿名函数)  
-
+lambda的主体是一个表达式，而不是一个代码块，即只包含一个语句 lambda [arg1 [,arg2,......argn]]:expression  
 
 **牢记py3的print要加括号()**  
 迭代器是一个可以记住遍历的位置的对象。  
